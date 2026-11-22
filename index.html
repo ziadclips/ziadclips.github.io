@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>Ziad Clips - Callback</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>body{font-family:sans-serif;max-width:720px;margin:3rem auto;padding:0 1rem;text-align:center}code{font-size:1.4rem;direction:ltr;display:inline-block;background:#f2f2f2;padding:.5rem 1rem;border-radius:8px;word-break:break-all}</style></head>
+<body><h1>Ziad Clips</h1><p id="msg">...</p><code id="code"></code>
+<script>
+const p=new URLSearchParams(location.search);const c=p.get("code");const e=p.get("error");
+if(c){document.getElementById("msg").textContent="تمام، التفويض نجح. انسخ الكود ده وابعته:";document.getElementById("code").textContent=c;}
+else if(e){document.getElementById("msg").textContent="حصل خطأ: "+e+" - "+(p.get("error_description")||"");}
+else{document.getElementById("msg").textContent="Ziad Clips - أداة شخصية لنشر فيديوهات على حساب تيك توك الخاص.";}
+</script></body></html>
